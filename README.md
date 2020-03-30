@@ -18,7 +18,7 @@ I like craft beer.  I want to create a website that makes finding craft beer and
 ![](Wireframes/iPad.png)
 
 ### Phone Wireframe:
-![](wireframes/iPhone.png)
+![](Wireframes/iPhone.png)
 
 ## Component Hierarchy:
 - App.jsx
