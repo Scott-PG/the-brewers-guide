@@ -1,5 +1,6 @@
 # **"The Brewer's Guide"** by Scott Griffith
 <br>
+
 ![](https://media.giphy.com/media/dORujEb6Elv2M/giphy.gif)
 
 ## The App
