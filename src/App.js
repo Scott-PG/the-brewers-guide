@@ -44,8 +44,8 @@ class App extends Component {
           </div>
         </main>
         <footer>
-          <p>Designed and Built by ScottPG</p>
-          <p>Data from BreweryDB</p>
+          <p className="footer-1">Designed and Built by ScottPG</p>
+          <p className="footer-2">Data from BreweryDB</p>
         </footer>
       </div>
     );

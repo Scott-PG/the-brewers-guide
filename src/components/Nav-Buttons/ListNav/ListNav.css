@@ -1,5 +1,7 @@
 .list-nav {
   display: grid;
   grid-template-columns: 1fr 180px 2fr 100px 2fr 180px 1fr;
+  grid-template-rows: 65px;
   grid-template-areas: ". b . c . f .";
+  margin: 0;
 }

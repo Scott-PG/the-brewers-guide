@@ -23,7 +23,6 @@ class Brewery extends Component {
       )
       .then(resp => {
         let breweryObject = resp.data.data;
-        console.log(breweryObject);
         this.setState({
           brewery: breweryObject
         });

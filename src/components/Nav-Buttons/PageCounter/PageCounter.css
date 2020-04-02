@@ -7,6 +7,7 @@
   align-self: center;
   width: auto;
   width: 100px;
+  margin: 0;
 }
 
 .counter {
@@ -15,6 +16,7 @@
   width: 100px;
   max-height: 46px;
   padding: 0;
+  margin: 0;
   font-family: "Proxima Nova", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -41,6 +43,7 @@
   color: #e5e6e1;
   background-color: #8c3c19;
   padding: 0;
+  margin: 0;
   width: 100px;
   height: 30px;
   font-size: 14px;

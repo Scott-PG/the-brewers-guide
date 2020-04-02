@@ -19,7 +19,8 @@
   position: absolute;
   cursor: pointer;
   text-align: center;
-  top: -32px;
+  margin: 0;
+  top: -7px;
   left: 98px;
   font-size: 36px;
   width: 60px;

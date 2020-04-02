@@ -21,7 +21,6 @@ class Beer extends Component {
       .get(`${corsURL}${baseURL}beer/${beerId}/?withBreweries=Y&key=${apiKey}`)
       .then(resp => {
         let beerObject = resp.data.data;
-        console.log(beerObject);
         this.setState({
           beer: beerObject
         });
