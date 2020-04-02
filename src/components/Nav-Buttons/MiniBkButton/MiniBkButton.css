@@ -1,0 +1,18 @@
+.mini-bk-btn {
+  border-color: #dda019;
+  color: #8c3c19;
+  background-color: #dda019;
+  border: 0;
+  padding: 0;
+  min-width: 60px;
+  min-height: 44px;
+  font-size: 28px;
+  border-radius: 100% 0 0 100%;
+}
+
+.mini-bk-btn:hover {
+  border-color: #e5e6e1;
+  cursor: pointer;
+  color: #e5e6e1;
+  background-color: #8c3c19;
+}

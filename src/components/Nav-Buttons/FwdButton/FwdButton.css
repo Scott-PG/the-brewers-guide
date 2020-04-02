@@ -1,0 +1,23 @@
+.bb-image {
+  height: 50px;
+}
+
+.bb-right {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  max-width: 273px;
+}
+
+.bb-right-number {
+  position: absolute;
+  cursor: pointer;
+  text-align: center;
+  top: -32px;
+  left: 23px;
+  font-size: 36px;
+  width: 60px;
+  text-decoration: none;
+  color: #5e1d06;
+}

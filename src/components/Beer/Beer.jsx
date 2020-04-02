@@ -44,13 +44,16 @@ class Beer extends Component {
           </Link>
         );
       });
+      let beerImage =
+        beer.labels != null ? <img src={beer.labels.medium} alt="" /> : "";
+      let beerABV = beer.abv != null ? <p>ABV: {beer.abv}%</p> : "";
       return (
         <div className="beer-info-div">
-          <img src={beer.labels.medium} alt="" />
+          {beerImage}
           <h2>{beer.name}</h2>
           {brewers}
-          <p>{beer.style.description}</p>
-          <p>ABV: {beer.abv}</p>
+          <p>{beer.description}</p>
+          {beerABV}
         </div>
       );
     }
