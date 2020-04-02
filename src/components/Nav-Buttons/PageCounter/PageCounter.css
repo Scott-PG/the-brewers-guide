@@ -1,8 +1,10 @@
 .counter-holder {
+  grid-area: c;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-self: center;
   width: auto;
   width: 100px;
 }

@@ -1,3 +1,8 @@
+.mini-fwd {
+  grid-area: f;
+  align-self: center;
+}
+
 .mini-fwd-btn {
   border-color: #dda019;
   color: #8c3c19;

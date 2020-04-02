@@ -6,6 +6,7 @@ class PageCounter extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      buildNumber: this.props.startValue,
       number: this.props.startValue,
       min: 1,
       max: this.props.max,
@@ -27,6 +28,21 @@ class PageCounter extends Component {
       number: temp
     });
   }
+  componentDidUpdate = () => {
+    if (this.state.buildNumber !== this.props.startValue) {
+      this.setState({
+        buildNumber: this.props.startValue,
+        number: this.props.startValue
+      });
+    }
+    if (this.state.max !== this.props.max) {
+      this.setState({ max: this.props.max });
+    }
+    if (this.state.linkPath !== this.props.linkPath) {
+      this.setState({ linkPath: this.props.linkPath });
+    }
+  };
+
   render() {
     return (
       <div className="counter-holder">

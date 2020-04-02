@@ -28,9 +28,15 @@ class App extends Component {
         <main>
           <Route exact path="/" component={About} />
           <Route path="/about" component={About} />
-          <Route path="/beers/:beersId" component={BeerList} />
+          <Route
+            path="/beers/:beersId"
+            render={props => <BeerList {...props} />}
+          />
           <Route path="/beer/:beerId" component={Beer} />
-          <Route path="/breweries/:breweriesId" component={BreweryList} />
+          <Route
+            path="/breweries/:breweriesId"
+            render={props => <BreweryList {...props} />}
+          />
           <Route path="/brewery/:breweryId" component={Brewery} />
         </main>
         <footer>

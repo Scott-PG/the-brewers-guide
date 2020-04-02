@@ -32,6 +32,29 @@ class BreweryList extends Component {
       });
   };
 
+  componentDidUpdate = async () => {
+    if (this.state.thisPage !== this.props.match.params.breweriesId) {
+      this.setState({ thisPage: this.props.match.params.breweriesId });
+      const apiKey = "4075498294422bcbd2006da0634066fb";
+      const baseURL = "https://sandbox-api.brewerydb.com/v2/";
+      const corsURL = "https://cors-anywhere.herokuapp.com/";
+      const breweryPage = this.props.match.params.breweriesId;
+
+      axios
+        .get(`${corsURL}${baseURL}breweries/?p=${breweryPage}&key=${apiKey}`)
+        .then(resp => {
+          let breweriesObject = resp.data;
+          this.setState({
+            breweryList: breweriesObject.data,
+            numberOfPages: breweriesObject.numberOfPages
+          });
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  };
+
   render() {
     let list = this.state.breweryList;
     if (this.state.breweryList === null) {

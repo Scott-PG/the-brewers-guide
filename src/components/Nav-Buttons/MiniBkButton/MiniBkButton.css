@@ -1,4 +1,10 @@
+.mini-bk {
+  grid-area: b;
+  align-self: center;
+}
+
 .mini-bk-btn {
+  grid-area: b;
   border-color: #dda019;
   color: #8c3c19;
   background-color: #dda019;

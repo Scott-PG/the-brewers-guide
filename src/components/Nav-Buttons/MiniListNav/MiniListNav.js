@@ -14,6 +14,18 @@ class MiniListNav extends Component {
     };
   }
 
+  componentDidUpdate = () => {
+    if (this.state.pageNumber !== this.props.currentPage) {
+      this.setState({ pageNumber: this.props.currentPage });
+    }
+    if (this.state.max !== this.props.lastPage) {
+      this.setState({ max: this.props.lastPage });
+    }
+    if (this.state.linkPath !== this.props.linkPath) {
+      this.setState({ linkPath: this.props.linkPath });
+    }
+  };
+
   render() {
     let backButton =
       this.state.pageNumber > 1 ? (

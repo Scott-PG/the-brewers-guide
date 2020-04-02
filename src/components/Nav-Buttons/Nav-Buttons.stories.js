@@ -44,5 +44,5 @@ storiesOf("List Nav", module)
 storiesOf("MiniList Nav", module)
   .addDecorator(StoryRouter())
   .add("MiniListNav", () => (
-    <MiniListNav currentPage={2} lastPage={23} linkPath="/beers/" />
+    <MiniListNav currentPage={23} lastPage={23} linkPath="/beers/" />
   ));

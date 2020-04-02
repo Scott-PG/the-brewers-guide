@@ -1,7 +1,5 @@
 .mini-list-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 220px;
+  display: grid;
+  grid-template-columns: auto 60px 100px 60px auto;
+  grid-template-areas: ". b c f .";
 }

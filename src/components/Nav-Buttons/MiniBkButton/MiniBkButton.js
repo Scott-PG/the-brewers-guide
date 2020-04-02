@@ -11,6 +11,14 @@ class MiniBkButton extends Component {
     };
   }
 
+  componentDidUpdate = () => {
+    if (this.state.number !== this.props.linkNumber) {
+      this.setState({ number: this.props.linkNumber });
+    }
+    if (this.state.linkPath !== this.props.linkPath) {
+      this.setState({ linkPath: this.props.linkPath });
+    }
+  };
   render() {
     return (
       <Link className="mini-bk" to={this.state.linkPath + this.state.number}>
