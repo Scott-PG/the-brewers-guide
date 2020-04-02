@@ -5,7 +5,6 @@ import BeerList from "./components/BeerList/BeerList";
 import Brewery from "./components/Brewery/Brewery";
 import BreweryList from "./components/BreweryList/BreweryList";
 import About from "./components/About/About";
-import BeerBottles from "./images/Beer-Bottle-Background.jpg";
 import "./App.css";
 
 class App extends Component {
