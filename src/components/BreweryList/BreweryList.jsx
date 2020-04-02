@@ -63,11 +63,16 @@ class BreweryList extends Component {
       list = list.map((item, idx) => {
         return (
           <Link key={idx} className="brewery-link" to={"/brewery/" + item.id}>
-            <h2 className="brewery-name">{item.name}</h2>
+            <h3 className="brewery-name">{item.name}</h3>
           </Link>
         );
       });
-      return <div className="brewery-link-holder">{list}</div>;
+      return (
+        <>
+          <h2>The Brewery List</h2>
+          <div className="brewery-link-holder">{list}</div>
+        </>
+      );
     }
   }
 }

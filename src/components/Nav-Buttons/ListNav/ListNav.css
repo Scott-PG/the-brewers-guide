@@ -1,6 +1,5 @@
 .list-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 180px 2fr 100px 2fr 180px 1fr;
+  grid-template-areas: ". b . c . f .";
 }

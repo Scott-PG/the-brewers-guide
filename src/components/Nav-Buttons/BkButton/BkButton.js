@@ -22,7 +22,7 @@ class BkButton extends Component {
 
   render() {
     return (
-      <Link to={this.state.linkPath + this.state.number}>
+      <Link className="bk" to={this.state.linkPath + this.state.number}>
         <div className="bb-left">
           <img
             className="bb-image"

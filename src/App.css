@@ -1,38 +1,118 @@
-.App {
+.app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  min-width: 100vw;
+  height: auto;
+  width: auto;
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "h"
+    "m"
+    "f";
+  background-image: url("./images/Beer-Bottle-Background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+header {
+  grid-area: h;
+  height: 100px;
+  background-color: #4e2303;
+  color: #fafbf6;
+  box-shadow: 0 0 12px #936703;
+  border-bottom: 1px solid #6e2d11;
+  display: grid;
+  grid-template-columns: 100px 300px 1fr 100px 1fr 300px 100px;
+  grid-template-areas: ". h . . . n .";
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 300px;
+  grid-area: n;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.home-link {
+  grid-area: h;
+}
+
+header a {
+  text-decoration: none;
+  color: #fafbf6;
+}
+
+header a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  grid-area: f;
+  height: 100px;
+  background-color: #4e2303;
+  color: #fafbf6;
+  box-shadow: 0 0 12px #936703;
+  border-top: 1px solid #6e2d11;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  grid-area: m;
+  display: grid;
+  grid-template-columns: 1fr 900px 1fr;
+  grid-template-rows: 40px 1fr 40px;
+  grid-template-areas:
+    ". . ."
+    ". c ."
+    ". . .";
+}
+
+.content-pane {
+  grid-area: c;
+  background-color: #fafbf6;
+  border-radius: 15px;
+  box-shadow: 0 0 12px #936703;
+  border: 1px solid #af7d10;
+  padding: 40px;
+}
+
+.mini-list-nav {
+  display: none;
+}
+
+.beer-link,
+.brewery-link {
+  text-decoration: none;
+  color: #5e1d06;
+}
+
+.beer-link:hover,
+.brewery-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr 40px;
+    grid-template-areas:
+      "."
+      "c"
+      ".";
   }
-  to {
-    transform: rotate(360deg);
+  .content-pane {
+    border-radius: 0;
   }
 }

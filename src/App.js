@@ -1,18 +1,21 @@
 import React, { Component } from "react";
-import { Route, Link, Redirect } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import Beer from "./components/Beer/Beer";
 import BeerList from "./components/BeerList/BeerList";
 import Brewery from "./components/Brewery/Brewery";
 import BreweryList from "./components/BreweryList/BreweryList";
 import About from "./components/About/About";
+import BeerBottles from "./images/Beer-Bottle-Background.jpg";
 import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <header>
-          <h1>Header Placeholder</h1>
+          <Link className="home-link" to="/">
+            <h1>The Brewer's Guide</h1>
+          </Link>
           <nav>
             <Link className="nav-link" to="/breweries/1">
               <h2>Breweries</h2>
@@ -26,22 +29,24 @@ class App extends Component {
           </nav>
         </header>
         <main>
-          <Route exact path="/" component={About} />
-          <Route path="/about" component={About} />
-          <Route
-            path="/beers/:beersId"
-            render={props => <BeerList {...props} />}
-          />
-          <Route path="/beer/:beerId" component={Beer} />
-          <Route
-            path="/breweries/:breweriesId"
-            render={props => <BreweryList {...props} />}
-          />
-          <Route path="/brewery/:breweryId" component={Brewery} />
+          <div className="content-pane">
+            <Route exact path="/" component={About} />
+            <Route path="/about" component={About} />
+            <Route
+              path="/beers/:beersId"
+              render={props => <BeerList {...props} />}
+            />
+            <Route path="/beer/:beerId" component={Beer} />
+            <Route
+              path="/breweries/:breweriesId"
+              render={props => <BreweryList {...props} />}
+            />
+            <Route path="/brewery/:breweryId" component={Brewery} />
+          </div>
         </main>
         <footer>
           <p>Designed and Built by ScottPG</p>
-          <p>With Data from BreweryDB</p>
+          <p>Data from BreweryDB</p>
         </footer>
       </div>
     );
